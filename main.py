@@ -197,7 +197,7 @@ class DatabaseManager:
         except Exception as e:
             print(f"更新复习记录失败: {str(e)}")
             return False
-
+from utils.AuthV3Util import addAuthParams
 class Translator:
     """翻译类"""
     def __init__(self, config):
@@ -216,26 +216,23 @@ class Translator:
             app_key = self.config.youdao_app_key
             app_secret = self.config.youdao_app_secret
             
-            # 生成参数
-            salt = str(uuid.uuid4())
-            curtime = str(int(time.time()))
-            
-            # 生成签名
-            sign_str = app_key + text + salt + curtime + app_secret
-            sign = hashlib.sha256(sign_str.encode()).hexdigest()
-            
+            # # 生成参数
+            # salt = str(uuid.uuid4())
+            # curtime = str(int(time.time()))
+            #
+            # # 生成签名
+            # sign_str = app_key + text + salt + curtime + app_secret
+            # sign = hashlib.sha256(sign_str.encode()).hexdigest()
+            #
             # 请求参数
             params = {
                 'q': text,
                 'from': 'auto',
                 'to': 'zh-CHS',
-                'appKey': app_key,
-                'salt': salt,
-                'sign': sign,
-                'signType': 'v3',
-                'curtime': curtime
             }
-            
+
+            addAuthParams(app_key, app_secret, params)
+
             # 发送请求
             response = requests.post('https://openapi.youdao.com/api', params=params, timeout=5)
             result = response.json()

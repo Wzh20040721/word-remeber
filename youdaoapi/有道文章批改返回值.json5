@@ -1,0 +1,299 @@
+
+{
+    "RequestId": "9cd0e024-5927-4c43-8fbf-0d36462cb4ca",
+    "errorCode": "0",
+    "Result": {
+      // 请求原文
+      "rawEssay": "Actually, it is sort of a fish berry jam.  Lots of job loss is just one thing resulting from automation. We do the essential Python on 22nd September 2019. We do an important python on the 22nd of September 2019. We have 5 apples in the important things 5 on Sep 2019.",
+      // 文章句子数
+      "sentNum": 5,
+      // 每个请求独一无二的字符串标识
+      "uniqueKey": "3b9e61e0-d6c1-4194-8cf6-2c4c9ae209c2",
+      // 文章最终评价
+      "essayAdvice": "",
+      // 文章最终得分
+      "totalScore": 0,
+      // 文章最终简短评价·
+      "totalEvaluation": "Excellent!",
+      // 语言信息
+      "essayLangName": "English",
+      // 是AllFeatureScore中score整合结果
+      "majorScore": {
+        // 语法得分：包括拼写、语法、句子复杂度得分等
+        "grammarScore": 89.8,
+        // 语法评价
+        "grammarAdvice": "存在少量语法错误，建议认真检查",
+        // 内容（主题相关性）得分，如果没有参考范文，该部分得分会从语法和复杂度上考虑
+        "topicScore": 66.2,
+        // 词汇得分：包括词数、丰富度、高级词汇等得分
+        "wordScore": 89,
+        // 词汇评价
+        "wordAdvice": "单词拼写基本正确，单词拼写基础扎实；词汇量较为丰富，能使用一定数量的高级词汇",
+        // 逻辑得分：包括段落和连接词得分
+        "structureScore": 88.3,
+        // 逻辑评价
+        "structureAdvice": "逻辑性不错，上下文关系衔接较为紧密"
+      },
+      // 段落数
+      "paraNum": 1,
+      // 文章批改结果
+      "essayFeedback": {
+        // 句子批改结果，所有的句子都仅有语法错误，语法错误详细说明看下方：语法错误类型详细说明
+        "sentsFeedback": [
+          // 第1句话，包含单节点-点击多项替换错误、单节点-展示类型
+          {
+            // 原句
+            "rawSent": "Actually, it is sort of a fish berry jam.",
+            // 段落id，从0有序编号
+            "paraId": 0,
+            // 句子id，从0有序编号
+            "sentId": 0,
+            // 本句话中所有的语法错误，包括基础和高级错误
+            "errorPosInfos": [
+              // 这是一个单节点-点击多项替换错误
+              {
+                // 推荐标识id
+                "id": 1668590140818,
+                // 类似下面的isValidSent，判断是否为合法片段（该片段如果语言检测结果与期望不一致，则认为不合法）
+                "isValidLangChunk": true,
+                // 发生错误的内容
+                "orgChunk": "Actually",
+                // 业务错误一级信息
+                "errorTypeTitle": "词汇频繁使用",
+                // orgChunk相对rawSent 起始位置的偏移量
+                "startPos": 0,
+                // 错误块修正后的具体内容
+                "correctChunk": "Actually",
+                // orgChunk相对rawSent 结束位置的偏移量
+                "endPos": 8,
+                // 错误的副标题信息
+                "cardSubtitle": "替换新单词",
+                // 错误基本信息
+                "errBaseInfo": "词汇使用频繁，建议替换新单词",
+                // 业务划定的错误大类信息
+                "errToBBasicType": "",
+                // 错误原因的详细解释(比reason更进一步)
+                "detailReason": "词汇使用频繁",
+                // 所有例句
+                "exampleCases": [],
+                // 节点类型 1-单节点，2-多节点
+                "nodeType": 1,
+                // 结构类型 1-提示类，2-点击单项替换，3-点击多项替换，4-点击选择替换类
+                "structType": 3,
+                // 展示类型，1-基础卡片与1.0一致，2-高级卡片
+                "showType": 2,
+                // 当nodeType=1，structType=3时，表示多项值
+                "target": [
+                  "Really",
+                  "Indeed"
+                ],
+                // 是否vip卡片
+                "vip": true
+              },
+              // 这是一个单节点-提示类型错误
+              {
+                "id": 1668590140820,
+                "isValidLangChunk": true,
+                "orgChunk": "sort of",
+                "errorTypeTitle": "不必要的修饰词",
+                "startPos": 16,
+                "correctChunk": "sort of",
+                "endPos": 23,
+                "cardSubtitle": "删除修饰词",
+                "errBaseInfo": "学术用词具体、简洁，口语化的一些补白词不够正式，表意模糊，建议删除[rValidChunk]",
+                "errToBBasicType": "",
+                "detailReason": "学术用词具体、简洁，口语化的一些补白词不够正式，表意模糊",
+                "knowledgeExp": "学术写作要求用词<b>明确、简洁</b>，类似kind of的补白词模糊性较强，过于口语化，建议删除。",
+                // 所有例句
+                "exampleCases": [
+                  {
+                    // 原句
+                    "error": "An oil does not blend with water",
+                    // 例句翻译
+                    "rightTranslate": "油不溶于水。",
+                    // 例句
+                    "right": "Oil does not blend with water."
+                  }
+                ],
+                "nodeType": 1,
+                "showType": 2,
+                "structType": 2,
+                "target": [],
+                "vip": true
+              }
+            ],
+            // 错误原因反馈，基于errorPosInfos中所有reason字段拼接而成
+            "sentFeedback": "词汇频繁使用，建议替换新单词；不必要的修饰词，建议删除〖sort of〗",
+            // 该句子在全文中相对于文章 初始位置的偏移量
+            "sentStartPos": 0,
+            // 正确的句子
+            "correctedSent": "Actually, it is sort of a fish berry jam.",
+            // 返回是否含有语法错误
+            "isContainGrammarError": false,
+            // 返回是否含有typo错误
+            "isContainTypoError": false,
+            // 是否为合法句子（合法与否取决于语言检测对该句的语言信息识别结果与期望结果是否一致）
+            "isValidLangSent": true,
+          },
+          // 省略的中间的句子反馈信息
+          // 第3句话，包含多节点选择替换错误
+          {
+            "rawSent": "We do the essential Python on 22nd September 2019.",
+            "paraId": 0,
+            "sentId": 2,
+            "errorPosInfos": [
+              // 这是一个多节点选择替换错误的其中一个节点
+              {
+                "id": 1668590140825,
+                "isValidLangChunk": true,
+                "orgChunk": "22nd September",
+                "errorTypeTitle": "日期表达不一致",
+                "startPos": 30,
+                "correctChunk": "{\"DthMonth\":\"22nd September\",\"TheDthofMonth\":\"the 22nd of September\",\"MonthDth\":\"September 22nd\"}",
+                "endPos": 44,
+                "cardSubtitle": "使用一致的日期表达",
+                "errBaseInfo": "上下文日期表达不一致，建议使用一致的日期表达",
+                "errToBBasicType": "",
+                "detailReason": "上下文日期表达不一致",
+                "knowledgeExp": "<b>日期</b>有几种不同表达方式。January 20，January 20th，Jan. 20，以及20 January都是正确的。一篇文章通常<b>保持日期表达一致</b>。",
+                "exampleCases": [
+
+                ],
+                // 多节点的parentId一致
+                "parentId": "1668590140767",
+                "nodeType": 2,
+                // 只有nodeType=2，structType=4，且是日期错误才会出现
+                // 原片段
+                "orgDateType": "Dth Month",
+                "showType": 2,
+                "structType": 4,
+                "vip": true,
+                // 只有nodeType=2，structType=4，才会存在
+                "statInfo": [
+                  {
+                    // 该类型出现的数量
+                    "count": 1,
+                    // 示例，日期类型才会存在
+                    "demo": "5th Dec",
+                    // 类型
+                    "item": "Dth Month"
+                  },
+                  {
+                    "count": 1,
+                    "demo": "The 5th of Dec",
+                    "item": "The Dth of Month"
+                  }
+                ],
+              }
+            ],
+            "sentFeedback": "大小写不统一，建议修改大小写；日期表达不一致，建议使用一致的日期表达",
+            "sentStartPos": 105,
+            "correctedSent": "We do the essential {\"lower\":\"python\",\"capitalize\":\"Python\"} on {\"DthMonth\":\"22nd September\",\"TheDthofMonth\":\"the 22nd of September\",\"MonthDth\":\"September 22nd\"} 2019.",
+            "isContainGrammarError": false,
+            "isContainTypoError": false,
+            "isValidLangSent": true
+          },
+          // 第4句话，包含多节点选择替换错误
+          {
+            "rawSent": "We do an important python on the 22nd of September 2019.",
+            "paraId": 0,
+            "sentId": 3,
+            "errorPosInfos": [
+              // 这是一个多节点选择替换错误的其中一个节点，与第3句话的错误有同样的父parentId
+              {
+                "id": 1668590140828,
+                "isValidLangChunk": true,
+                "orgChunk": "the 22nd of September",
+                "orgDateType": "The Dth of Month",
+                "errorTypeTitle": "日期表达不一致",
+                "startPos": 29,
+                "correctChunk": "{\"DthMonth\":\"22nd September\",\"TheDthofMonth\":\"the 22nd of September\",\"MonthDth\":\"September 22nd\"}",
+                "endPos": 50,
+                "cardSubtitle": "使用一致的日期表达",
+                "errBaseInfo": "上下文日期表达不一致，建议使用一致的日期表达",
+                "errToBBasicType": "",
+                "detailReason": "上下文日期表达不一致",
+                "knowledgeExp": "<b>日期</b>有几种不同表达方式。January 20，January 20th，Jan. 20，以及20 January都是正确的。一篇文章通常<b>保持日期表达一致</b>。",
+                "exampleCases": [],
+                "parentId": "1668590140767",
+                "nodeType": 2,
+                "showType": 2,
+                "statInfo": [
+                  {
+                    "count": 1,
+                    "demo": "5th Dec",
+                    "item": "Dth Month"
+                  },
+                  {
+                    "count": 1,
+                    "demo": "The 5th of Dec",
+                    "item": "The Dth of Month"
+                  }
+                ],
+                "structType": 4,
+                "vip": true
+              }
+            ],
+            "sentFeedback": "词汇频繁使用，建议替换新单词；大小写不统一，建议修改大小写；日期表达不一致，建议使用一致的日期表达",
+            "sentStartPos": 156,
+            "correctedSent": "We do an important {\"lower\":\"python\",\"capitalize\":\"Python\"} on {\"DthMonth\":\"22nd September\",\"TheDthofMonth\":\"the 22nd of September\",\"MonthDth\":\"September 22nd\"} 2019.",
+            "isContainGrammarError": false,
+            "isContainTypoError": false,
+            "isValidLangSent": true
+          },
+          // 第5句话，包含单节点点击单项替换错误
+          {
+            "rawSent": "We have 5 apples in the important things 5 on Sep 2019.",
+            "paraId": 0,
+            "sentId": 4,
+            "errorPosInfos": [
+              {
+                "id": 1668590140830,
+                "isValidLangChunk": true,
+                "orgChunk": "5",
+                "errorTypeTitle": "拼写不统一",
+                "startPos": 8,
+                "correctChunk": "five",
+                "endPos": 9,
+                "cardSubtitle": "拼写单词",
+                "errBaseInfo": "阿拉伯数字应该使用英文拼写，建议将[orgChunk]修改为[correctChunk]",
+                "errToBBasicType": "",
+                "detailReason": "阿拉伯数字应该使用英文拼写",
+                "knowledgeExp": "一般来说，<b>0到9的数字</b>都应该<b>拼写</b>出来。如果想要表达日期、地址、金钱、分数、百分比、分数和小数，可以直接使用数字。",
+                "exampleCases": [],
+                "nodeType": 1,
+                "showType": 2,
+                "structType": 2,
+                "vip": true
+              }
+            ],
+            "sentFeedback": "拼写不统一，建议将〖5〗修改为【five】；词汇频繁使用，建议替换新单词",
+            "sentStartPos": 213,
+            "correctedSent": "We have five apples in the important things 5 on Sep 2019.",
+            "isContainGrammarError": true,
+            "isContainTypoError": false,
+            "isValidLangSent": true
+
+          }
+        ]
+      },
+      // 单词数
+      "wordNum": 0,
+      // 文章总分
+      "fullScore": 100,
+      // 请求学段英文名称
+      "stLevel": "TASK1",
+      // 请求学段code
+      "stLevelCode": 9,
+      // 请求标题
+      "title": "yapi-test-1",
+      // 请求写作模式
+      "writeModel": 1,
+      // 请求文体类型
+      "writeType": 1,
+      // 请求细分学段code
+      "articleFormCode": 90102,
+      // 写作报告，可看下方
+      "essayReport": {}
+    }
+}
